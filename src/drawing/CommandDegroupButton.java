@@ -14,11 +14,11 @@ public class CommandDegroupButton implements Command {
     @Override
     public void execute() {
         for (Shape shape : drawing) {
-            if(shape.isSelected && shape instanceof CompositeShape) {
-                compositeShape = (CompositeShape) shape;;
+            if (shape.isSelected && shape instanceof CompositeShape) {
+                compositeShape = (CompositeShape) shape;
             }
         }
-        for(Shape shape2 : compositeShape.getShapes()) {
+        for (Shape shape2 : compositeShape.getShapes()) {
             drawing.addShape(shape2);
         }
         drawing.removeShape(compositeShape);
@@ -27,7 +27,7 @@ public class CommandDegroupButton implements Command {
 
     @Override
     public void unexecute() {
-        for(Shape shape : compositeShape.getShapes()) {
+        for (Shape shape : compositeShape.getShapes()) {
             drawing.removeShape(shape);
         }
         drawing.addShape(compositeShape);

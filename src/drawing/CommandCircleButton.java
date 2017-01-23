@@ -14,12 +14,12 @@ public class CommandCircleButton extends ShapeButtonListener {
 
     @Override
     protected Shape createShape() {
-        double width = Math.abs(destination.getX()-origin.getX());
-        double height = Math.abs(destination.getY()-origin.getY());
-        double radius = Math.max(width, height)/2;
-        double centerX = (destination.getX()+origin.getX())/2;
-        double centerY = (destination.getY()+origin.getY())/2;
-        Point center = new Point((int)centerX, (int)centerY);
+        double width = Math.abs(destination.getX() - origin.getX());
+        double height = Math.abs(destination.getY() - origin.getY());
+        double radius = Math.max(width, height) / 2;
+        double centerX = (destination.getX() + origin.getX()) / 2;
+        double centerY = (destination.getY() + origin.getY()) / 2;
+        Point center = new Point((int) centerX, (int) centerY);
         c = new Circle(center, radius, Color.RED);
         return c;
     }

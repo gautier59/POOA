@@ -87,7 +87,7 @@ public class Paint implements Observable {
         textButton.addActionListener(inv);
 
         //listeners pour la zone de dessin
-        DrawingMouseListener l = new DrawingMouseListener(drawing,inv);
+        DrawingMouseListener l = new DrawingMouseListener(drawing, inv);
         drawing.addMouseListener(l);
         drawing.addMouseMotionListener(l);
 
@@ -101,8 +101,8 @@ public class Paint implements Observable {
         statusLabel.setText("Elements draw " + value);
     }
 
-     static ElementCounter getCompteur() {
-        return  counter;
+    static ElementCounter getCompteur() {
+        return counter;
     }
 
 

@@ -11,7 +11,7 @@ public class CommandDeplacer implements Command {
     private Point startPoint;
     private Point endPoint;
 
-    public CommandDeplacer(Drawing drawing, Shape shape,Point point) {
+    public CommandDeplacer(Drawing drawing, Shape shape, Point point) {
         this.drawing = drawing;
         this.currentShape = shape;
         this.startPoint = point;

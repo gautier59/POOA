@@ -11,31 +11,31 @@ public class ElementCounter {
 
     int counter = 0;
 
-    public void addObserver(Observable obs){
+    public void addObserver(Observable obs) {
         observers.add(obs);
     }
 
-    public void removeObserver(Observable obs){
+    public void removeObserver(Observable obs) {
         observers.remove(obs);
     }
 
-    private void notifyObservers(){
+    private void notifyObservers() {
         for (Observable obs : observers) {
             obs.update(counter);
         }
     }
 
-    public void reset(){
+    public void reset() {
         counter = 0;
         notifyObservers();
     }
 
-    public void increment(){
+    public void increment() {
         counter++;
         notifyObservers();
     }
 
-    public void decrement(){
+    public void decrement() {
         counter--;
         notifyObservers();
     }

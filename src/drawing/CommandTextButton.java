@@ -21,8 +21,8 @@ public class CommandTextButton implements Command {
 
     @Override
     public void execute() {
-        for(Shape shape : drawing) {
-            if(shape.isSelected) {
+        for (Shape shape : drawing) {
+            if (shape.isSelected) {
                 currentShape = shape;
                 decorateurShape = new DecorateurShape(currentShape);
                 showFrameText();

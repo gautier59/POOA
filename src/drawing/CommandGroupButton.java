@@ -20,7 +20,7 @@ public class CommandGroupButton implements Command {
             }
         }
 
-        for(Shape shape : compositeShape.getShapes()) {
+        for (Shape shape : compositeShape.getShapes()) {
             drawing.removeShape(shape);
         }
         drawing.addShape(compositeShape);
@@ -29,7 +29,7 @@ public class CommandGroupButton implements Command {
 
     @Override
     public void unexecute() {
-        for(Shape shape : compositeShape.getShapes()) {
+        for (Shape shape : compositeShape.getShapes()) {
             drawing.addShape(shape);
         }
         drawing.removeShape(compositeShape);

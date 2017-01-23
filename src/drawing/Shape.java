@@ -7,29 +7,28 @@ import java.awt.Point;
  * Classe abstraite de type forme dessinable.
  */
 public abstract class Shape {
-	
-	protected Point origin;
-	public boolean isSelected = false;
+
+    protected Point origin;
+    public boolean isSelected = false;
 
 
-	public void setOrigin(Point p)
-	{
-		origin = p;
-	}
+    public void setOrigin(Point p) {
+        origin = p;
+    }
 
-	public Point getPoint(){
-		return origin;
-	}
+    public Point getPoint() {
+        return origin;
+    }
 
-	/**
-	 * dessine la forme sur un Graphics
-	 */
-	public abstract void paint(Graphics g);
-	
-	/**
-	 * renvoie true si la forme occupe sur le point donn�
-	 */
-	public abstract boolean isOn(Point p);
+    /**
+     * dessine la forme sur un Graphics
+     */
+    public abstract void paint(Graphics g);
 
-	public abstract Shape clone();
+    /**
+     * renvoie true si la forme occupe sur le point donn�
+     */
+    public abstract boolean isOn(Point p);
+
+    public abstract Shape clone();
 }

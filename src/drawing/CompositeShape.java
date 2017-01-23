@@ -25,15 +25,13 @@ public class CompositeShape extends Shape {
         return Lst_Shape;
     }
 
-
     @Override
-    public void setOrigin(Point p)
-    {
-        if(this.origin != null) {
+    public void setOrigin(Point p) {
+        if (this.origin != null) {
             int xD = this.origin.x - p.x;
             int yD = this.origin.y - p.y;
 
-            for(Shape s : Lst_Shape) {
+            for (Shape s : Lst_Shape) {
                 Point newPos = new Point(s.origin.x - xD, s.origin.y - yD);
                 s.setOrigin(newPos);
             }
@@ -43,7 +41,7 @@ public class CompositeShape extends Shape {
 
     @Override
     public void paint(Graphics g) {
-        for(Shape s : Lst_Shape) {
+        for (Shape s : Lst_Shape) {
             s.paint(g);
         }
     }
@@ -62,7 +60,7 @@ public class CompositeShape extends Shape {
     public Shape clone() {
         CompositeShape compositeShape = new CompositeShape();
         compositeShape.origin = this.origin;
-        for(Shape shape : Lst_Shape) {
+        for (Shape shape : Lst_Shape) {
             compositeShape.addShape(shape.clone());
         }
         return compositeShape;

@@ -15,12 +15,12 @@ public class CommandDupliquerButton implements Command {
     @Override
     public void execute() {
         for (Shape shape : drawing) {
-            if(shape.isSelected) {
+            if (shape.isSelected) {
                 this.shape = shape;
             }
         }
         cloneShape = this.shape.clone();
-       drawing.addShape(cloneShape);
+        drawing.addShape(cloneShape);
     }
 
     @Override
